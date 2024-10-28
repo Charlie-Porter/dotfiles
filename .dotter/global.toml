@@ -1,0 +1,13 @@
+[helpers]
+
+[default]
+depends = []
+
+[default.files]
+"README.md" = ""
+nvim = ""
+
+[default.variables]
+
+[settings]
+default_target_type = "automatic"
