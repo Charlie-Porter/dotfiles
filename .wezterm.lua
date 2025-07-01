@@ -9,7 +9,6 @@ local keys = {
 	{ key = "s", mods = "LEADER", action = wezterm.action({ EmitEvent = "save_session" }) },
 	{ key = "l", mods = "LEADER", action = wezterm.action({ EmitEvent = "load_session" }) },
 	{ key = "r", mods = "LEADER", action = wezterm.action({ EmitEvent = "restore_session" }) },
-	--{ key = "w", mods = "CTRL|SHIFT", action = act.SwitchToWorkspace({ name = "default" }) },
 	{ key = "i", mods = "CTRL|SHIFT", action = act.SwitchToWorkspace },
 	{
 		key = "9",
@@ -17,6 +16,16 @@ local keys = {
 		action = act.ShowLauncherArgs({
 			flags = "FUZZY|WORKSPACES",
 		}),
+	},
+	{
+		key = "q",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.CloseCurrentTab({ confirm = true }),
+	},
+	{
+		key = "v",
+		mods = "CTRL",
+		action = wezterm.action.PasteFrom("Clipboard"),
 	},
 }
 
@@ -50,4 +59,4 @@ config.launch_menu = launch_menu
 config.default_cwd = "C:/repos"
 config.default_prog = { "cmd.exe", "/k", "C:\\Users\\charles.porter\\scripts\\alias.bat" }
 
-return config
+return config0
